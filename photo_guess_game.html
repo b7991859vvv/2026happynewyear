@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <title>猜照片是誰的</title>
 
-const el = id => document.getElementById(id);
-
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
@@ -43,6 +41,7 @@ img { width: 150px; display:block; }
 </div>
 
 <script>
+
 /* 🔥 Firebase 設定 */
 firebase.initializeApp({
  apiKey: "AIzaSyC764z-zUOfh8up0DsAJfnc0O0kNGbe-gU",
@@ -56,6 +55,8 @@ firebase.initializeApp({
 
 const db = firebase.firestore();
 const storage = firebase.storage();
+
+const el = id => document.getElementById(id);
 
 let currentUser = "";
 
