@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <title>猜照片是誰的</title>
 
+const el = id => document.getElementById(id);
+
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
@@ -59,7 +61,7 @@ let currentUser = "";
 
 /* 登入 */
 function login(){
-  const name = document.getElementById("username").value.trim();
+  const name = el("username").value.trim();
   if(!name){
     alert("請輸入名字");
     return;
@@ -67,9 +69,8 @@ function login(){
 
   currentUser = name;
 
-  document.getElementById("login").style.display = "none";
-  document.getElementById("upload").style.display = "block";
-}
+  el("login").style.display = "none";
+  el("upload").style.display = "block";
 }
 
 /* 上傳照片 */
